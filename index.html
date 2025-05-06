@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TekPlay - Fun Interactive Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- TODO: Replace with TekPlay's favicon.ico -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <meta name="description" content="TekPlay: Dive into a world of fun, animated, and interactive learning experiences for kids!">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <!-- TODO: Replace with TekPlay's actual logo -->
+            <a href="index.html" class="logo-link" aria-label="TekPlay Home">
+                <!-- Placeholder for TekPlay Logo. Use an SVG or a high-quality PNG -->
+                <img src="images/tekplay-logo.png" alt="TekPlay Logo" class="logo-img">
+            </a>
+
+            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list" id="navListDesktop">
+                    <li>
+                        <a href="#shows" class="nav-link active-nav-item" aria-label="Shows">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.47L12 3l8 3.47V18H4V6.47M18 5.53L12 8.17l-6-2.64L12 4l6 1.53M6 8.82V16h12V8.82l-6 2.63-6-2.63M12 19.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/><path d="M4 6.47L12 3l8 3.47V18H4V6.47zM18 5.53L12 8.17l-6-2.64L12 4l6 1.53zM6 8.82V16h12V8.82l-6 2.63-6-2.63zm11 10.18H7v-1.5h10v1.5zM21 19v-2h-2v2h-2v-2h-2v2h-2v-2H9v2H7v-2H5v2H3v-2H1v2a1 1 0 001 1h18a1 1 0 001-1zM20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4V6h16v12zM8 10h8v2H8v-2z"/></svg>
+                            <span class="nav-text">Shows</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#music" class="nav-link" aria-label="Music">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                            <span class="nav-text">Music</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#learn" class="nav-link" aria-label="Learn">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm12 16H6V20h12v-2zM12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/></svg>
+                            <span class="nav-text">Learn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#explore" class="nav-link" aria-label="Explore">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                            <span class="nav-text">Explore</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Search Icon (Simple Placeholder) -->
+                <button class="icon-button search-button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <!-- Profile Icon (Simple Placeholder) -->
+                <button class="icon-button profile-button" aria-label="Profile">
+                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </button>
+                <button class="nav-toggle-mobile" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navListMobile">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="close-icon" style="display:none;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav" id="navListMobile" aria-hidden="true">
+            <ul>
+                 <li><a href="#shows">Shows</a></li>
+                 <li><a href="#music">Music</a></li>
+                 <li><a href="#learn">Learn</a></li>
+                 <li><a href="#explore">Explore</a></li>
+                 <li><a href="#profile">Profile</a></li>
+                 <li><a href="#search">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero/Banner Section (Simplified) -->
+    <section class="hero-section" id="home" aria-labelledby="hero-title">
+        <div class="container hero-content">
+            <!-- TODO: Replace with engaging image or pure CSS animated background -->
+            <h2 id="hero-title">Welcome to TekPlay!</h2>
+            <p>Endless fun and learning adventures await!</p>
+            <a href="#shows" class="button button-primary">Start Exploring</a>
+        </div>
+        <!-- Simple animated background elements -->
+        <div class="animated-shape shape-1"></div>
+        <div class="animated-shape shape-2"></div>
+        <div class="animated-shape shape-3"></div>
+    </section>
+
+    <!-- Main Content Area (e.g., "Shows" category) -->
+    <main role="main">
+        <section id="shows" class="content-category container" aria-labelledby="shows-title">
+            <h2 id="shows-title" class="category-title">Popular Shows</h2>
+            <div class="item-grid">
+                <!-- TODO: Replace with actual show cards -->
+                <article class="content-item-card">
+                    <a href="#" class="card-link" aria-label="Watch Awesome Adventures Episode 1">
+                        <div class="card-thumbnail-wrapper">
+                            <img src="https://via.placeholder.com/320x180/FF6347/FFFFFF?text=Show+1" alt="Awesome Adventures Thumbnail" class="card-thumbnail">
+                            <div class="play-icon-overlay">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Awesome Adventures Ep. 1</h3>
+                        <p class="card-subtitle">TekPlay Originals</p>
+                    </a>
+                </article>
+                <article class="content-item-card">
+                     <a href="#" class="card-link" aria-label="Watch Space Explorers Part 3">
+                        <div class="card-thumbnail-wrapper">
+                            <img src="https://via.placeholder.com/320x180/4682B4/FFFFFF?text=Show+2" alt="Space Explorers Thumbnail" class="card-thumbnail">
+                             <div class="play-icon-overlay">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Space Explorers Pt. 3</h3>
+                        <p class="card-subtitle">Educational Series</p>
+                    </a>
+                </article>
+                <!-- Add 2-4 more cards for variety -->
+                 <article class="content-item-card">
+                     <a href="#" class="card-link" aria-label="Watch Animal Friends Fun Time">
+                        <div class="card-thumbnail-wrapper">
+                            <img src="https://via.placeholder.com/320x180/32CD32/FFFFFF?text=Show+3" alt="Animal Friends Thumbnail" class="card-thumbnail">
+                             <div class="play-icon-overlay">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Animal Friends Fun Time</h3>
+                        <p class="card-subtitle">Cute & Cuddly</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- TODO: Create similar sections for #music, #learn, #explore -->
+        <!-- Example for Music -->
+        <section id="music" class="content-category container" aria-labelledby="music-title">
+            <h2 id="music-title" class="category-title">Sing Along Songs</h2>
+             <div class="item-grid">
+                <article class="content-item-card">
+                    <a href="#" class="card-link" aria-label="Play The Alphabet Song">
+                        <div class="card-thumbnail-wrapper">
+                            <img src="https://via.placeholder.com/320x180/FFC107/333333?text=Song+1" alt="The Alphabet Song Thumbnail" class="card-thumbnail">
+                            <div class="play-icon-overlay music-icon-overlay">
+                                <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="card-title">The Alphabet Song</h3>
+                        <p class="card-subtitle">Learning Tunes</p>
+                    </a>
+                </article>
+                <!-- Add more music cards -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-content">
+            <p class="copyright-text">© <span id="currentYear"></span> TekPlay. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About TekPlay</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="social-icons">
+                <!-- TODO: Replace with TekPlay's actual social links and consider using their branded SVGs -->
+                <a href="#" aria-label="TekPlay on Facebook"><svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11H9v3h3v7h3v-7h3s0-1.5 0-3h-3V8.5c0-.83.42-1.5 1.5-1.5H18V5z"/></svg></a>
+                <a href="#" aria-label="TekPlay on Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

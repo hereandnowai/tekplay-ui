@@ -1,0 +1,336 @@
+/* css/style.css */
+
+/* ------------------------- */
+/* ✅ TekPlay Brand Color Palette (Updated) */
+/* Inspired by YouTube Kids UI — Playful, Bold, Friendly */
+/* ------------------------- */
+:root {
+    /* 🎨 Core Brand Colors */
+    --tekplay-primary: #6A4FB3;         /* Main Purple - TekPlay Brand Core */
+    --tekplay-secondary: #FAD237;       /* Main Yellow - Accent Highlight */
+    --tekplay-accent: #FFBC3A;          /* Orange-Yellow Accent for UI Animations */
+    --tekplay-green: #66BB6A;           /* Supportive Green (Keep for success states) */
+    --tekplay-purple: #A996DC;          /* Lighter Purple (backgrounds, card fills) */
+
+    /* 🔤 Text Colors */
+    --tekplay-text-dark: #2F2A45;       /* Strong Contrast Text */
+    --tekplay-text-light: #FFFFFF;      /* Text on dark backgrounds or buttons */
+
+    /* 🎨 Backgrounds */
+    --tekplay-bg-main: #F9F8FC;         /* Soft Lavender Background */
+    --tekplay-bg-header: #FFFFFF;       /* Clean White Header */
+    --tekplay-bg-card: #F1EDFA;         /* Light Purple Card Background */
+    --tekplay-footer-bg: #3A265D;       /* Deep Purple Footer */
+    --tekplay-footer-text: #C9C3DD;     /* Soft Lavender-Grey Text */
+
+    /* ✍️ Fonts */
+    --font-body: 'Nunito Sans', 'Arial', sans-serif;
+    --font-headings: 'Fredoka One', 'Arial Black', sans-serif;
+    /* Optionally import fonts: */
+    /* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@400;700&display=swap'); */
+
+    /* 🧩 UI Components Styling */
+    --border-radius-soft: 8px;
+    --border-radius-round: 16px;
+
+    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --box-shadow-strong: 0 6px 18px rgba(0, 0, 0, 0.10);
+
+    /* 🌈 Button States */
+    --tekplay-btn-primary: var(--tekplay-primary);
+    --tekplay-btn-primary-hover: #4A3085;
+    --tekplay-btn-primary-active: #3A265D;
+
+    --tekplay-btn-accent: var(--tekplay-secondary);
+    --tekplay-btn-accent-hover: #D8B000;
+    --tekplay-btn-accent-active: #C19A00;
+}
+
+/* ------------------------- */
+/* Global Resets & Base      */
+/* ------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+    font-family: var(--font-body);
+    line-height: 1.65;
+    color: var(--tekplay-text-dark);
+    background-color: var(--tekplay-bg-main);
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; border-radius: var(--border-radius-soft); }
+a { text-decoration: none; color: var(--tekplay-primary); transition: color 0.2s ease; }
+a:hover, a:focus { color: var(--tekplay-accent); }
+
+/* Utility */
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+.button {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: var(--border-radius-round);
+    font-family: var(--font-headings);
+    font-size: 1rem;
+    font-weight: normal; /* Fredoka One is already bold */
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: var(--box-shadow-light);
+}
+.button:hover, .button:focus { transform: translateY(-2px) scale(1.02); box-shadow: var(--box-shadow-strong); }
+.button-primary { background-color: var(--tekplay-secondary); color: var(--tekplay-text-dark); }
+.button-primary:hover, .button-primary:focus { background-color: color-mix(in srgb, var(--tekplay-secondary) 90%, black); }
+
+/* ------------------------- */
+/* Header                    */
+/* ------------------------- */
+.site-header {
+    background-color: var(--tekplay-bg-header);
+    padding: 12px 0;
+    box-shadow: var(--box-shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--tekplay-primary);
+}
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 36px; /* Adjust as needed */ width: auto; }
+.main-nav .nav-list { list-style: none; display: flex; align-items: center; gap: 10px; }
+.main-nav .nav-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Icon on top of text */
+    padding: 8px 12px;
+    border-radius: var(--border-radius-round);
+    color: var(--tekplay-text-dark);
+    position: relative;
+}
+.main-nav .nav-icon {
+    width: 28px; height: 28px;
+    margin-bottom: 2px;
+    color: var(--tekplay-primary); /* Default icon color */
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease; /* Bouncy animation */
+}
+.main-nav .nav-text { font-size: 0.75rem; font-weight: 700; color: var(--tekplay-text-dark); }
+
+/* Nav Link Hover & Active States */
+.main-nav .nav-link:hover .nav-icon,
+.main-nav .nav-link:focus .nav-icon {
+    transform: scale(1.25) rotate(-5deg);
+    color: var(--tekplay-accent);
+}
+.main-nav .nav-link:hover .nav-text,
+.main-nav .nav-link:focus .nav-text {
+    color: var(--tekplay-accent);
+}
+.main-nav .nav-link.active-nav-item { background-color: color-mix(in srgb, var(--tekplay-primary) 15%, transparent); }
+.main-nav .nav-link.active-nav-item .nav-icon { color: var(--tekplay-accent); transform: scale(1.1); }
+.main-nav .nav-link.active-nav-item .nav-text { color: var(--tekplay-accent); }
+
+
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.icon-button {
+    background: none; border: none; padding: 8px; cursor: pointer;
+    color: var(--tekplay-text-dark);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.icon-button svg { width: 24px; height: 24px; }
+.icon-button:hover, .icon-button:focus {
+    background-color: color-mix(in srgb, var(--tekplay-primary) 15%, transparent);
+    transform: scale(1.1);
+    color: var(--tekplay-primary);
+}
+.nav-toggle-mobile { display: none; /* Shown on mobile */ }
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none; /* Hidden by default */
+    background-color: var(--tekplay-bg-header);
+    box-shadow: var(--box-shadow-light);
+    position: absolute;
+    top: 100%; /* Below header */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid var(--tekplay-bg-main);
+}
+.mobile-nav.active { display: block; }
+.mobile-nav ul { list-style: none; }
+.mobile-nav ul li a {
+    display: block; padding: 12px 20px;
+    font-weight: 700; color: var(--tekplay-text-dark);
+    border-bottom: 1px solid var(--tekplay-bg-main);
+}
+.mobile-nav ul li a:hover, .mobile-nav ul li a:focus { background-color: color-mix(in srgb, var(--tekplay-primary) 10%, transparent); color: var(--tekplay-primary); }
+
+
+/* ------------------------- */
+/* Hero Section              */
+/* ------------------------- */
+.hero-section {
+    background: linear-gradient(135deg, var(--tekplay-primary), var(--tekplay-purple));
+    color: var(--tekplay-text-light);
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden; /* For animated shapes */
+    min-height: 40vh;
+    display: flex; align-items: center; justify-content: center;
+}
+.hero-content h2 {
+    font-family: var(--font-headings);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 0.5em;
+    color: var(--tekplay-text-light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.hero-content p { font-size: clamp(1rem, 3vw, 1.25rem); margin-bottom: 1.5em; opacity: 0.9; }
+.animated-shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    opacity: 0; /* Fade in with JS or animate */
+    animation: float 15s infinite ease-in-out, fadeInShapes 1s ease-out forwards;
+}
+.shape-1 { width: 150px; height: 150px; bottom: -50px; left: 10%; animation-delay: 0s, 0.2s; }
+.shape-2 { width: 80px; height: 80px; top: 10%; right: 15%; animation-delay: -5s, 0.5s; }
+.shape-3 { width: 120px; height: 120px; top: 50%; left: 25%; animation-delay: -10s, 0.8s; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) translateX(15px) rotate(15deg) scale(1.1); }
+}
+@keyframes fadeInShapes { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+
+/* ------------------------- */
+/* Content Categories & Cards*/
+/* ------------------------- */
+.content-category { padding: 40px 0; }
+.category-title {
+    font-family: var(--font-headings);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: var(--tekplay-primary);
+    margin-bottom: 1em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+.category-title::after { /* Playful underline */
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 80px; height: 4px;
+    background-color: var(--tekplay-secondary);
+    border-radius: 2px;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.content-item-card {
+    background-color: var(--tekplay-bg-card);
+    border-radius: var(--border-radius-round);
+    box-shadow: var(--box-shadow-light);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.content-item-card:hover, .content-item-card:focus-within {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: var(--box-shadow-strong);
+}
+.card-link { display: block; color: inherit; }
+.card-thumbnail-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9; /* Common video aspect ratio */
+    background-color: #e0e0e0; /* Placeholder color */
+}
+.card-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+.play-icon-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.content-item-card:hover .play-icon-overlay,
+.content-item-card:focus-within .play-icon-overlay { opacity: 1; }
+.play-icon-overlay svg {
+    width: 50px; height: 50px;
+    fill: var(--tekplay-text-light);
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+.music-icon-overlay svg { width: 40px; height: 40px; } /* Slightly smaller for music */
+
+.card-title {
+    font-family: var(--font-headings);
+    font-size: 1.1rem;
+    color: var(--tekplay-text-dark);
+    margin: 12px 15px 4px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card-subtitle {
+    font-size: 0.85rem;
+    color: #78909C; /* Muted color */
+    margin: 0 15px 15px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* ------------------------- */
+/* Footer                    */
+/* ------------------------- */
+.site-footer {
+    background-color: var(--tekplay-footer-bg);
+    color: var(--tekplay-footer-text);
+    padding: 30px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.footer-links a { margin: 0 10px; color: var(--tekplay-footer-text); }
+.footer-links a:hover { color: var(--tekplay-secondary); }
+.social-icons { display: flex; gap: 15px; }
+.social-icons svg {
+    width: 24px; height: 24px;
+    fill: var(--tekplay-footer-text);
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+.social-icons a:hover svg, .social-icons a:focus svg {
+    fill: var(--tekplay-secondary);
+    transform: scale(1.2);
+}
+
+/* ------------------------- */
+/* Responsive Adjustments    */
+/* ------------------------- */
+@media (max-width: 992px) { /* Tablets */
+    .main-nav .nav-list { gap: 5px; }
+    .main-nav .nav-link { padding: 8px; }
+    .main-nav .nav-icon { width: 26px; height: 26px; }
+    .main-nav .nav-text { font-size: 0.7rem; }
+}
+
+@media (max-width: 767px) { /* Mobile */
+    .main-nav { display: none; /* Hide desktop nav */ }
+    .nav-toggle-mobile { display: flex; } /* Show hamburger */
+
+    .header-container { position: relative; /* For mobile menu positioning */ }
+
+    .item-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .hero-content h2 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+    .hero-content p { font-size: clamp(0.9rem, 4vw, 1.1rem); }
+
+    .footer-content { flex-direction: column; }
+}
+@media (max-width: 480px) { /* Small mobile */
+    .item-grid { grid-template-columns: 1fr; } /* Single column */
+    .logo-img { height: 30px; }
+    .icon-button svg { width: 20px; height: 20px; }
+}
