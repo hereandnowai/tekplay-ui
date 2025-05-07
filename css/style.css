@@ -1,5 +1,9 @@
 /* css/style.css */
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Fredoka+One&family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Fruktur&family=Fredoka+One&family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Fruktur&family=Fredoka+One&family=Luckiest+Guy&family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Fruktur&family=Fredoka+One&family=Luckiest+Guy&family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Fruktur&family=Fredoka+One&family=Gochi+Hand&family=Luckiest+Guy&family=Nunito+Sans:wght@400;700&display=swap');
 
 /* ------------------------- */
 /* ✅ TekPlay Brand Color Palette (Updated) */
@@ -146,7 +150,15 @@ a:hover, a:focus { color: var(--tekplay-accent); }
     color: var(--tekplay-primary); /* Default icon color */
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease; /* Bouncy animation */
 }
-.main-nav .nav-text { font-size: 0.75rem; font-weight: 700; color: var(--tekplay-text-dark); }
+.main-nav .nav-text {
+    font-family: 'Gochi Hand', cursive; /* CHANGE FONT FAMILY HERE */
+    font-size: 0.9rem; /* You can adjust this size if needed */
+    font-weight: normal; /* CHANGE TO REGULAR WEIGHT (400 is normal/regular) */
+    /* Or use 'normal' if the font's default is what you want and it's not bold: font-weight: normal; */
+    color: var(--tekplay-text-dark); /* Keep or adjust based on header background */
+    /* letter-spacing: 0.5px; /* Optional: slightly increase letter spacing for small text */
+    /* text-transform: uppercase; /* Optional: if you want uppercase menu text */
+}
 
 /* Nav Link Hover & Active States */
 .main-nav .nav-link:hover .nav-icon,
