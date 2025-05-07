@@ -1,4 +1,5 @@
 /* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Fredoka+One&family=Nunito+Sans:wght@400;700&display=swap');
 
 /* ------------------------- */
 /* ✅ TekPlay Brand Color Palette (Updated) */
@@ -24,10 +25,9 @@
     --tekplay-footer-text: #C9C3DD;     /* Soft Lavender-Grey Text */
 
     /* ✍️ Fonts */
-    --font-body: 'Nunito Sans', 'Arial', sans-serif;
-    --font-headings: 'Fredoka One', 'Arial Black', sans-serif;
+    --font-body: 'Fruktur', cursive;
+    --font-headings: 'Fruktur', cursive;
     /* Optionally import fonts: */
-    /* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@400;700&display=swap'); */
 
     /* 🧩 UI Components Styling */
     --border-radius-soft: 8px;
@@ -55,10 +55,17 @@ body {
     font-family: var(--font-body);
     line-height: 1.65;
     color: var(--tekplay-text-dark);
-    background-color: var(--tekplay-bg-main);
+    /* TODO: Replace 'path/to/your/robotic-background-image.jpg' with the actual path to your image */
+    background-image: url('../images/robotic-theme-background.jpg'); /* Assumes image is in an 'images' folder next to your HTML file */
+    background-size: cover; /* Scales the image to cover the entire body */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image stay in place when scrolling */
+    background-color: var(--tekplay-bg-main); /* Fallback color if the image doesn't load */
     overflow-x: hidden; /* Prevent horizontal scrollbars */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh; /* Ensure body takes at least full viewport height for fixed background */
 }
 img { max-width: 100%; height: auto; display: block; border-radius: var(--border-radius-soft); }
 a { text-decoration: none; color: var(--tekplay-primary); transition: color 0.2s ease; }
@@ -107,6 +114,32 @@ a:hover, a:focus { color: var(--tekplay-accent); }
     color: var(--tekplay-text-dark);
     position: relative;
 }
+
+/* ... existing .logo-img styles ... */
+
+.logo-link {
+    display: flex; /* Allows easy alignment of image and text */
+    align-items: center; /* Vertically aligns the image and text */
+    gap: 8px; /* Adds a small space between the logo image and the text */
+    color: var(--tekplay-text-dark); /* Makes the link (and thus text) use your dark text color */
+    text-decoration: none; /* Ensures no underline on the text if the <a> tag gets one */
+}
+
+.logo-text {
+    font-family: var(--font-headings); /* Use your heading font for the brand name */
+    font-size: 1.5rem; /* Adjust size as needed - make it prominent */
+    font-weight: normal; /* If your heading font is already bold (like Fredoka One) */
+    /* If using a font like Nunito Sans, you might want: font-weight: 700; */
+    color: var(--tekplay-primary); /* Use your primary brand color for the text */
+    /* You could also use --tekplay-text-dark if you prefer it to match other text */
+    line-height: 1; /* Adjust line-height to help with vertical alignment if needed */
+}
+
+.logo-link:hover .logo-text,
+.logo-link:focus .logo-text {
+    color: var(--tekplay-accent); /* Optional: change text color on hover/focus */
+}
+
 .main-nav .nav-icon {
     width: 28px; height: 28px;
     margin-bottom: 2px;
@@ -181,6 +214,7 @@ a:hover, a:focus { color: var(--tekplay-accent); }
     min-height: 40vh;
     display: flex; align-items: center; justify-content: center;
 }
+    
 .hero-content h2 {
     font-family: var(--font-headings);
     font-size: clamp(2rem, 6vw, 3.5rem);
@@ -219,6 +253,7 @@ a:hover, a:focus { color: var(--tekplay-accent); }
     position: relative;
     padding-bottom: 10px;
 }
+
 .category-title::after { /* Playful underline */
     content: '';
     position: absolute;
