@@ -14,9 +14,9 @@
     <!-- Header Section -->
     <header class="site-header" role="banner">
         <div class="container header-container">
+            <a href="index.html" class="logo-link sfx-hover sfx-click" aria-label="TekPlay Home" data-sfx-hover data-sfx-click>
             <!-- TODO: Replace with TekPlay's actual logo -->
-            <a href="index.html" class="logo-link" aria-label="TekPlay Home">
-                <!-- Placeholder for TekPlay Logo. Use an SVG or a high-quality PNG -->
+            <!-- Placeholder for TekPlay Logo. Use an SVG or a high-quality PNG -->
                 <img src="images/tekplay-logo.png" alt="TekPlay Logo" class="logo-img">
                 <span class="logo-text">TekPlaY</span>
             </a>
@@ -24,25 +24,25 @@
             <nav class="main-nav" role="navigation" aria-label="Main Navigation">
                 <ul class="nav-list" id="navListDesktop">
                     <li>
-                        <a href="#home" class="nav-link active-nav-item" aria-label="home">
+                        <a href="#home" class="nav-link active-nav-item sfx-hover sfx-click" aria-label="home" data-sfx-hover data-sfx-click>
                             <img class="nav-icon" src="images/home.png" alt="Home Icon">
                             <span class="nav-text">home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#music" class="nav-link" aria-label="My Courses">
+                        <a href="#music" class="nav-link sfx-hover sfx-click" aria-label="My Courses" data-sfx-hover data-sfx-click>
                             <img class="nav-icon" src="images/my-courses.png">
                             <span class="nav-text">my courses</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#profile " class="nav-link" aria-label="Profile">
+                        <a href="#profile" class="nav-link sfx-hover sfx-click" aria-label="Profile" data-sfx-hover data-sfx-click>
                             <img class="nav-icon" src="images/profile.png">
                             <span class="nav-text">profile</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#explore" class="nav-link" aria-label="Explore">
+                        <a href="#explore" class="nav-link sfx-hover sfx-click" aria-label="Explore" data-sfx-hover data-sfx-click>
                             <img class="nav-icon" src="images/explore.png">
                             <span class="nav-text">Explore</span>
                         </a>
@@ -82,9 +82,9 @@
     <section class="hero-section" id="home" aria-labelledby="hero-title">
         <div class="container hero-content">
             <!-- TODO: Replace with engaging image or pure CSS animated background -->
-            <h2 id="hero-title">Welcome to TekPlay LMS! - Version 0.3</h2>
+            <h2 id="hero-title">Welcome to TekPlay LMS! - Version 0.4 - sound effects added</h2>
             <p>Endless fun learning robotics & ai!</p>
-            <a href="#home" class="button button-primary">Start Exploring</a>
+            <a href="#home" class="button button-primary sfx-hover sfx-click" data-sfx-hover data-sfx-click>Start Exploring</a>
         </div>
         <!-- Simple animated background elements -->
         <div class="animated-shape shape-1"></div>
@@ -175,8 +175,21 @@
                 <a href="#" aria-label="TekPlay on Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a>
             </div>
         </div>
-    </footer>
+</footer>
 
-    <script src="js/script.js"></script>
+    <!-- AUDIO ELEMENTS FOR SFX -->
+<audio id="sfx-hover-sound" preload="auto">
+    <source src="audio/hover-sfx.mp3" type="audio/mpeg">
+    <!-- Provide a .wav alternative if you have one and want wider compatibility, though mp3 is good -->
+    <!-- <source src="audio/hover-sfx.wav" type="audio/wav"> -->
+    Your browser does not support the audio element.
+</audio>
+<audio id="sfx-click-sound" preload="auto">
+    <source src="audio/click-sfx.mp3" type="audio/mpeg">
+    <!-- <source src="audio/click-sfx.wav" type="audio/wav"> -->
+    Your browser does not support the audio element.
+</audio>
+
+<script src="js/script.js"></script>
 </body>
 </html>
