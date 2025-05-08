@@ -29,8 +29,8 @@
     --tekplay-footer-text: #C9C3DD;     /* Soft Lavender-Grey Text */
 
     /* ✍️ Fonts */
-    --font-body: 'Fruktur', cursive;
-    --font-headings: 'Fruktur', cursive;
+    --font-body: 'gochi hand', cursive;
+    --font-headings: 'gochi hand', cursive;
     /* Optionally import fonts: */
 
     /* 🧩 UI Components Styling */
@@ -131,7 +131,7 @@ a:hover, a:focus { color: var(--tekplay-accent); }
 
 .logo-text {
     font-family: var(--font-headings); /* Use your heading font for the brand name */
-    font-size: 1.5rem; /* Adjust size as needed - make it prominent */
+    font-size: 2.5rem; /* Adjust size as needed - make it prominent */
     font-weight: normal; /* If your heading font is already bold (like Fredoka One) */
     /* If using a font like Nunito Sans, you might want: font-weight: 700; */
     color: var(--tekplay-primary); /* Use your primary brand color for the text */
@@ -152,7 +152,7 @@ a:hover, a:focus { color: var(--tekplay-accent); }
 }
 .main-nav .nav-text {
     font-family: 'Gochi Hand', cursive; /* CHANGE FONT FAMILY HERE */
-    font-size: 0.9rem; /* You can adjust this size if needed */
+    font-size: 1.5rem; /* You can adjust this size if needed */
     font-weight: normal; /* CHANGE TO REGULAR WEIGHT (400 is normal/regular) */
     /* Or use 'normal' if the font's default is what you want and it's not bold: font-weight: normal; */
     color: var(--tekplay-text-dark); /* Keep or adjust based on header background */
