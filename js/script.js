@@ -3,6 +3,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("TekPlay scripts initialized!");
 
+    // --- START: LOADER SCRIPT ---
+    const loaderOverlay = document.getElementById('loader-overlay');
+    const bodyElement = document.body;
+
+    if (loaderOverlay) {
+        console.log("Loader overlay found. Initializing loader.");
+        bodyElement.classList.add('loader-active'); // Prevent scrolling
+
+        // Set timeout to hide loader (3 to 5 seconds)
+        // Math.random() * (max - min) + min
+        const loadTime = Math.random() * (5000 - 3000) + 3000; // Random between 3000ms and 5000ms
+        // const loadTime = 4000; // Or a fixed time, e.g., 4 seconds
+
+        console.log(`Loader will display for approximately ${Math.round(loadTime / 1000)} seconds.`);
+
+        setTimeout(() => {
+            loaderOverlay.classList.add('hidden');
+            bodyElement.classList.remove('loader-active'); // Allow scrolling
+            console.log("Loader hidden. Website content should be visible.");
+
+            // Optional: Remove the loader from DOM after transition to save resources
+            // setTimeout(() => {
+            //     loaderOverlay.remove();
+            // }, 500); // Must be same as CSS transition duration for opacity/visibility
+        }, loadTime);
+    } else {
+        console.warn("Loader overlay element not found. Skipping loader.");
+        bodyElement.classList.remove('loader-active'); // Ensure scrolling is enabled if loader is missing
+    }
+    // --- END: LOADER SCRIPT ---
+
     // --- Mobile Navigation Toggle ---
     const navToggleMobile = document.querySelector('.nav-toggle-mobile');
     const mobileNavMenu = document.getElementById('navListMobile');
