@@ -180,7 +180,7 @@ A role is a collection of permissions. Tek Play LMS comes with several standard 
 This page allows you to grant users a role that applies across the entire site. For example, assigning the "Manager" role to a user here gives them manager-level access to the entire Tek Play LMS. Use this with extreme caution.
 This is a diagnostic tool. You can select a user and see exactly what permissions they have in the system context, and which role granted them that permission. This is invaluable for troubleshooting access issues.
 [Troubleshooting]
-If a user reports they cannot access a feature they should have, use the "Check system permissions" tool. Search for the user and the specific capability (e.g., moodle/course:create). The report will show if they have permission and, if not, why.
+If a user reports they cannot access a feature they should have, use the "Check system permissions" tool. Search for the user and the specific capability (e.g., tekplay/course:create). The report will show if they have permission and, if not, why.
 This page provides a detailed report on which roles are granted a specific permission (capability). It is useful for auditing your site's security and role definitions.
 This is an alternative way to grant context-level roles. For example, you could give every user in the "Mentors" cohort the "User" role in a specific user category. This is a less common function than cohort sync for course enrollment.
 ________________
