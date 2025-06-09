@@ -1,0 +1,383 @@
+﻿________________
+
+
+Tek Play LMS Guide
+Version: 1.0
+Publication Date: June 9, 2025
+Developed by: HERE AND NOW AI
+________________
+
+
+
+
+
+
+________________
+
+
+Table of Contents
+1. Introduction
+1.1. About This Guide
+1.2. Who Should Use This Guide?
+1.3. Navigating the Site Administration Panel
+2. Chapter 1: General Settings
+2.1. Overview
+2.2. Analytics
+2.3. Competencies
+2.4. Badges
+2.5. H5P
+2.6. Language
+2.7. Appearance
+2.8. Site Home
+3. Chapter 2: Users
+3.1. Overview
+3.2. Accounts
+3.2.1. Browse List of Users
+3.2.2. Bulk User Actions
+3.2.3. Add a New User
+3.2.4. Cohorts
+3.2.5. Upload Users (Bulk Upload)
+3.2.6. Upload User Pictures
+3.3. Permissions
+3.3.1. Define Roles
+3.3.2. Assign System Roles
+3.3.3. Check System Permissions
+3.3.4. Capability Overview
+3.3.5. Assign User Roles to Cohort
+4. Chapter 3: Courses
+4.1. Overview
+4.2. Course and Category Management
+4.2.1. Manage Courses and Categories
+4.2.2. Add a Category
+4.2.3. Add a New Course
+4.2.4. Restore Course
+4.2.5. Pending Requests
+4.2.6. Upload Courses
+4.3. Default Settings
+4.4. Activity Chooser
+4.5. Backups
+4.6. Adding Activities and Resources (Detailed)
+5. Chapter 4: Grades
+5.1. Overview
+5.2. General Grade Settings
+5.3. Grade Category Settings
+5.4. Grade Item Settings
+5.5. Scales
+5.6. Letters
+5.7. Report Settings
+6. Chapter 5: Plugins
+6.1. Overview
+6.2. Managing Plugins (Conceptual)
+7. Chapter 6: Reports
+7.1. Overview
+7.2. Standard Reports
+7.2.1. Comments
+7.2.2. Backups
+7.2.3. Insights
+7.2.4. Logs & Live Logs
+7.2.5. Performance Overview
+7.2.6. Security Checks
+7.2.7. System Status
+7.2.8. Event Monitoring Rules
+7.3. Report Builder
+8. Glossary
+9. Index
+10. Change Log
+11. Support & Contact
+________________
+
+
+1. Introduction
+1.1. About This Guide
+Welcome to the Tek Play LMS Site Administration Guide. This document provides a comprehensive overview of the manager-level site administration features available in the Learning Management System (LMS) developed by HERE AND NOW AI. This guide is designed to empower you to effectively manage your learning environment, from users and courses to system-wide settings and reports.
+1.2. Who Should Use This Guide?
+This guide is intended for Site Administrators and Managers who have been granted access to the Site Administration panel within the Tek Play LMS. Users should have a basic understanding of learning management concepts. No advanced technical expertise is required.
+1.3. Navigating the Site Administration Panel
+The Site Administration panel is your central hub for managing the entire LMS. It is organized into six primary tabs, each corresponding to a major chapter in this guide:
+   * General: Configure site-wide settings like appearance, language, and homepage.
+   * Users: Manage user accounts, permissions, roles, and cohorts.
+   * Courses: Create, categorize, and manage all courses and their default settings.
+   * Grades: Control how grades are handled across the entire site.
+   * Plugins: Manage the building blocks that extend your LMS's functionality.
+   * Reports: Access system data, logs, and performance metrics.
+To access the panel, log in with your administrator credentials and click the "Site administration" link in the main navigation menu.
+________________
+
+
+2. Chapter 1: General Settings
+2.1. Overview
+The General tab allows you to control the fundamental settings of your Tek Play LMS instance. These settings affect the entire site, including its look and feel, language, and how high-level learning frameworks are managed.
+[Insert Figure 1.1: 'General' tab—Site administration panel]
+Caption: Figure 1.1: The General settings tab.
+2.2. Analytics
+   * Analytics models: This section allows you to manage the predictive models used by the LMS. These models can analyze student activity to predict success, identify students at risk, and generate insights for educators. You can enable, disable, and configure the built-in models or create new ones based on specific targets and indicators.
+2.3. Competencies
+Competencies are skills, knowledge, or behaviors that a learner can achieve. The Tek Play LMS allows you to create learning plans based on competency frameworks.
+   * Migrate frameworks: If you are upgrading from a previous system, this tool helps you migrate existing competency frameworks to the current version.
+   * Import competency framework: Import a predefined competency framework from a CSV file. This is useful for adopting standards from an educational authority or another institution.
+   * Export competency framework: Export an existing framework to a CSV file for backup or sharing.
+   * Competency framework: Create and manage your own competency frameworks, defining each competency and its hierarchy.
+   * Learning plan templates: Create templates that can be used to generate personalized learning plans for students, often based on specific competency frameworks.
+2.4. Badges
+Digital badges are a powerful way to recognize achievement and motivate learners.
+   * Badges settings: Configure default settings for site-wide badges, such as the default issuer name and email address.
+   * Manage badges: View, edit, enable, or disable all site-level badges that have been created.
+   * Add a new badge: Create a new site-level badge. This involves giving it a name, description, and image, and defining the criteria for earning it (e.g., completing a set of courses).
+   * Manage backpacks: Configure connections to external badge backpack services (like Badgr or Open Badge Passport). This allows users to push their earned badges to a public, personal collection.
+2.5. H5P
+   * Manage H5P content types: H5P allows for the creation of rich, interactive content like interactive videos, quizzes, and presentations. This page lets you control which H5P content types are available for course creators to use. You can update existing types, upload new ones, and disable those you don't want to be used.
+2.6. Language
+   * Language customisation: This powerful tool allows you to change the wording of any text string in the Tek Play LMS interface. If you want to change "Course" to "Module" or "Teacher" to "Facilitator," you can do so here without editing any code. This is extremely useful for tailoring the LMS to your organization's specific vocabulary.
+2.7. Appearance
+   * Default dashboard page: Set the default layout and blocks for all new users' dashboards.
+   * Default profile page: Configure the default layout of user profile pages.
+   * Manage tags: Tags are keywords that can be attached to courses, activities, and other content to aid in searching and discovery. Here, you can manage the official collection of tags for your site.
+   * User tours: Create and manage guided tours for users. A user tour can point out key features on a page, helping with onboarding for new students or teachers.
+2.8. Site Home
+   * Site home settings: Control what appears on the front page of your Tek Play LMS site for logged-in and logged-out users. You can choose to display a list of courses, categories, a news feed, or a combination of different blocks.
+________________
+
+
+3. Chapter 2: Users
+3.1. Overview
+The Users tab is the command center for all user management. Here, you will create accounts, organize users into groups, and define what each type of user is allowed to do within the system.
+[Insert Figure 1.2: 'Users' tab—Site administration panel]
+Caption: Figure 1.2: The Users tab and its sub-sections.
+3.2. Accounts
+This page provides a searchable and filterable list of all users on your site. You can view user profiles, edit their details, or suspend their accounts.
+This tool allows you to perform actions on multiple users at once. First, you filter and select a group of users (e.g., all users in a specific city). Then, you can perform actions like confirming their accounts, sending them a message, downloading their data, or deleting them.
+This is a manual form for creating a single user account. You will need to provide a username, choose an authentication method, set a password, and fill in their first name, last name, and email address. Other profile fields are optional.
+A cohort is a site-wide group of users. Cohorts are a powerful way to manage enrollments. For example, you can create a cohort for "All Grade 10 Teachers" or "New Hires - Q3". You can then enroll an entire cohort into a course in a single step.
+   * Procedure: Creating a Cohort and Enrolling in a Course
+   1. Navigate to Site administration > Users > Cohorts.
+   2. Click "Add new cohort".
+   3. Give the cohort a Name (e.g., "Marketing Department"), a Context (usually "System"), and an ID number. Click "Save changes".
+   4. Click the "Assign" icon (head and shoulders) in the row for your new cohort.
+   5. Select users from the right-hand "Potential users" list and click "Add" to move them into the cohort.
+   6. Now, go to the course where you want to enroll them.
+   7. In the course, go to Participants > Enrolment methods.
+   8. From the "Add method" dropdown, select "Cohort sync".
+   9. Select your "Marketing Department" cohort from the dropdown and assign them a role (e.g., Student). Click "Add method". The users are now enrolled.
+   * [Best Practice]
+Use Cohort sync for enrollments whenever possible. If a user is added to or removed from the cohort, their enrollment in the course is automatically updated, saving significant administrative effort.
+This is the most efficient way to create multiple user accounts at once. You must create a CSV (Comma-Separated Values) file with specific column headers.
+CSV File Format:
+The file must contain at least these columns: username, firstname, lastname, email.
+Other useful optional columns include: password, course1, role1, cohort1.
+username,password,firstname,lastname,email,course1,role1
+jdoe,StrongP@ssw0rd!,John,Doe,j.doe@example.com,PROG101,student
+sroe,StrongP@ssw0rd!,Susan,Roe,s.roe@example.com,PROG101,student
+[Code Block: Sample CSV for user upload]
+      username,firstname,lastname,email,password,city,country,course1,role1,cohort1
+studentA,Alice,Alpha,student.a@school.com,NewPassword123,London,GB,INTRO2ROBOTICS,student,2025-Students
+studentB,Bob,Beta,student.b@school.com,NewPassword123,Paris,FR,INTRO2ROBOTICS,student,2025-Students
+teacherA,Charles,Charlie,teacher.c@school.com,NewPassword456,London,GB,INTRO2ROBOTICS,editingteacher,2025-Teachers
+   *    
+   * Once you have your CSV file, go to this page, upload the file, and review the settings (e.g., password creation policy, whether to force a password change). The system will then process the file and create the accounts.
+This feature allows you to bulk upload profile pictures for users. The image files must be named after the user's username (e.g., jdoe.jpg, sroe.png). You upload a ZIP file containing these images, and the system matches them to the corresponding user accounts.
+3.3. Permissions
+A role is a collection of permissions. Tek Play LMS comes with several standard roles (Manager, Course Creator, Teacher, Student, etc.). Here, you can edit these roles, create new ones, or delete custom roles. For example, you could create a "Non-editing Teacher" role that can grade assignments but not add or remove activities.
+This page allows you to grant users a role that applies across the entire site. For example, assigning the "Manager" role to a user here gives them manager-level access to the entire Tek Play LMS. Use this with extreme caution.
+This is a diagnostic tool. You can select a user and see exactly what permissions they have in the system context, and which role granted them that permission. This is invaluable for troubleshooting access issues.
+[Troubleshooting]
+If a user reports they cannot access a feature they should have, use the "Check system permissions" tool. Search for the user and the specific capability (e.g., moodle/course:create). The report will show if they have permission and, if not, why.
+This page provides a detailed report on which roles are granted a specific permission (capability). It is useful for auditing your site's security and role definitions.
+This is an alternative way to grant context-level roles. For example, you could give every user in the "Mentors" cohort the "User" role in a specific user category. This is a less common function than cohort sync for course enrollment.
+________________
+
+
+4. Chapter 3: Courses
+4.1. Overview
+This chapter covers the creation, organization, and management of courses and course content. From creating the structure with categories to defining default settings and managing backups, this tab is central to the educational architecture of your site.
+[Insert Figure 1.3: 'Courses' tab—Site administration panel]
+Caption: Figure 1.3: The Courses tab, for managing all learning content.
+4.2. Course and Category Management
+This is the main hub for organizing your learning environment. Here you can:
+   * View the hierarchy of course categories and sub-categories.
+   * Reorder categories.
+   * Edit category settings.
+   * Move courses between categories.
+   * Sort courses within a category.
+   * See at a glance which courses are visible or hidden.
+Courses are organized into categories. It is best practice to create a logical category structure before creating courses. For example: "Science," "Humanities," and "Professional Development." Each of these can have sub-categories, like "Physics" and "Chemistry" under "Science."
+   * Procedure: Creating a Course Category
+   1. Navigate to Site administration > Courses > Add a category.
+   2. Select a "Parent category" (or "Top" for a top-level category).
+   3. Enter a "Category name" (e.g., "Hardware & Electronics").
+   4. Provide an optional "Category ID number" and a "Description".
+   5. Click "Create category".
+   * This form allows you to create a single new course.
+   * Procedure: Creating a New Course
+   1. Navigate to Site administration > Courses > Add a new course.
+   2. General: Provide a "Course full name" (e.g., "Introduction to Robotics 101") and a "Course short name" (e.g., "ROBO101"). The short name is used in navigation and breadcrumbs.
+   3. Select a "Course category".
+   4. Set "Course visibility" and "Course start/end date" (optional).
+   5. Description: Add a "Course summary" and optionally a course image.
+   6. Course format: Choose how the course will be organized (e.g., "Topics format," "Weekly format").
+   7. Configure other settings like "Appearance" and "File uploads" as needed.
+   8. Click "Save and display".
+   9. After saving, you will be prompted to enroll users. You can add teachers and students now or later.
+   * If you have a course backup file (.mbz), you can use this page to restore it. You can restore it as a new course, restore it into an existing course, or simply view the contents of the backup file.
+If you allow course creators to request new courses, those requests will appear here for an administrator to approve or reject.
+Similar to uploading users, this feature allows you to create multiple courses at once by uploading a CSV file. You can specify the course name, category, short name, and other details in the file.
+4.3. Default Settings
+   * Default activity completion: Define the default settings for activity completion tracking. You can enable it by default and set the conditions (e.g., students must view the activity) that apply to all new activities created on the site.
+4.4. Activity Chooser
+   * Recommended activities: This allows you to control which activities and resources appear in the "Recommended" tab of the activity chooser within a course. This helps guide teachers to use the tools you want to promote.
+4.5. Backups
+   * General backup defaults: Configure the default settings for course backups (e.g., whether to include users, logs, or grade history by default).
+   * General import defaults: Set defaults for restoring courses.
+   * Automated backup setup: This is a critical feature for site maintenance. You can schedule automatic backups of all courses (or specific ones) on a daily, weekly, or monthly basis. You can set the time, storage location, and retention period.
+[Best Practice]
+Configure automated backups to run daily during off-peak hours. Store the backups in a secure, remote location if possible. A good backup strategy is the best defense against data loss.
+4.6. Adding Activities and Resources (Detailed)
+When a teacher is in a course and turns "Edit mode" on, they can use the "Add an activity or resource" button. The following items, visible in the activity chooser, are available site-wide.
+[Insert Figure 1.7: 'Add an activity or resource' dialog]
+Caption: Figure 1.7: The activity and resource chooser available to course creators.
+   * Assignment: The core tool for collecting and grading student work. Can be text submitted online, uploaded files, or offline tasks.
+   * Book: A multi-page resource with a book-like format. Excellent for displaying longer-form content in a structured way.
+   * Chat: A simple, real-time text chat activity.
+   * Choice: A single-question poll. Useful for quick checks of understanding or for students to sign up for options.
+   * Database: A powerful tool where teachers and/or students can build, display, and search a bank of record entries (e.g., a collaborative library of resources).
+   * Feedback: Create custom, non-graded surveys to collect feedback from students.
+   * File: Upload and display a single file of any type (e.g., PDF, PPTX, MP3).
+   * Folder: A way to group and display multiple files in a single location.
+   * Forum: The cornerstone of asynchronous discussion. Many forum types are available (e.g., single discussion, Q&A, standard forum).
+   * Glossary: Create a list of definitions, like a dictionary. Entries can be automatically linked throughout the course.
+   * H5P: Add rich, interactive content created with H5P.
+   * IMS content package: Upload learning content packaged in the IMS standard format.
+   * Lesson: A series of pages that can present content and ask questions. It is adaptive; student answers can direct them down different paths through the lesson.
+   * Page: A simple, single web page created within the LMS. Good for embedding text, images, and videos.
+   * Quiz: A highly flexible assessment tool with numerous question types (multiple choice, true/false, short answer, etc.). Can be configured for formative or summative assessment with extensive feedback options.
+   * SCORM: Upload learning content packaged in the SCORM standard, a common format for eLearning authoring tools. The LMS will track progress and scores from the package.
+   * Survey: A tool for gathering data from students using pre-built, validated survey instruments (like COLLES or ATTLS) focused on analyzing the learning environment.
+   * Text and media area: A label that allows you to embed text, images, or videos directly on the main course page, often used for headings or instructions.
+   * URL: A link to any external website.
+   * Wiki: A collection of collaboratively created web pages. Students can add and edit pages to build a shared resource.
+   * Workshop: A powerful peer assessment activity where students submit work and then review and grade the work of their peers based on a rubric provided by the teacher.
+________________
+
+
+5. Chapter 4: Grades
+5.1. Overview
+The Grades tab controls all aspects of grading at the site level. This includes defining grade scales, setting defaults for the gradebook, and configuring grade reports. Settings made here will become the defaults for all courses on the site.
+[Insert Figure 1.4: 'Grades' tab—Site administration panel]
+Caption: Figure 1.4: The site-level Grades settings.
+5.2. General Settings
+This page contains various options that affect the gradebook across all courses. You can control things like the roles that appear in the gradebook, how user profile information is shown, and the navigation method used.
+5.3. Grade Category Settings
+Here, you can define how grade categories behave by default in a course's gradebook. This includes the aggregation method (e.g., Mean of grades, Weighted mean), and whether to drop the lowest scores.
+5.4. Grade Item Settings
+Control the default settings for individual grade items. This includes the default grade display type (e.g., Real, Percentage, Letter) and the number of decimal points shown.
+5.5. Scales
+Scales are a way of grading that doesn't use numbers. For example, you could create a scale called "Competency" with the values "Not yet competent," "Competent," and "Exceeds expectations." This page allows you to create new custom scales that will then be available for teachers to use in their grading activities site-wide.
+5.6. Letters
+This page allows you to view and edit the default letter grade boundaries for the site. For example, you can define that an A is 93% or higher, a B is 85-92%, and so on. You can also override the defaults with different letter grade schemes.
+5.7. Report Settings
+These settings control the defaults for the various reports available within the course gradebook.
+   * Grader report: The standard spreadsheet-like view for teachers. You can set defaults for what is shown in this report.
+   * Grade history: A report that tracks all changes to grades. You can define what is shown here by default.
+   * Overview report: The report students see when they view their grades across all their courses.
+   * User report: The detailed report a student sees when they view their grades for a single course.
+________________
+
+
+6. Chapter 5: Plugins
+6.1. Overview
+Plugins are components that add new functionality or extend existing features in the Tek Play LMS. This can include new activity types, reports, authentication methods, and more. While no specific plugins are listed for management in the provided screenshots, this section explains their role in the ecosystem.
+[Insert Figure 1.5: 'Plugins' tab—Site administration panel]
+Caption: Figure 1.5: The Plugins tab.
+6.2. Managing Plugins (Conceptual)
+In a typical Tek Play LMS setup, the Plugins area is where an administrator would:
+   * Install new plugins: Upload a plugin file obtained from a trusted source.
+   * Uninstall plugins: Remove plugins that are no longer needed.
+   * Update plugins: Check for and install new versions of installed plugins to ensure security and compatibility.
+   * Manage plugin settings: Many plugins have their own site-wide settings pages that would be accessed from here.
+The core activities and resources (like Forum, Quiz, Assignment) are all types of plugins. The settings for many of these are managed in other areas of the Site Administration panel (e.g., Courses > Default activity completion). The Plugins tab is for the installation and high-level management of the plugin code itself.
+________________
+
+
+7. Chapter 6: Reports
+7.1. Overview
+The Reports tab provides access to detailed information about the activity and status of your Tek Play LMS site. These reports are essential for monitoring site health, troubleshooting issues, and gaining insights into user behavior.
+[Insert Figure 1.6: 'Reports' tab—Site administration panel]
+Caption: Figure 1.6: The site-level Reports tab.
+7.2. Standard Reports
+   * Comments: A report that shows all comments left on the system.
+   * Backups: A log of all course backup activities, showing which courses were backed up, when, and whether the backup succeeded or failed.
+   * Insights: View and manage the insights generated by the analytics models (see Chapter 1).
+   * Logs: A detailed log of all actions taken on the site. You can filter by user, course, time, and action to see exactly who did what, and when. This is invaluable for auditing and troubleshooting.
+   * Live logs: A real-time view of the logs as they are being generated.
+   * Performance overview: A report that provides information on the system's performance, including various configuration settings and recommendations.
+   * Security checks: A report that checks for common security weaknesses in your site's configuration and recommends improvements.
+   * System status: A quick overview showing the version of Tek Play LMS and related server software.
+   * Event monitoring rules: Allows you to create rules to be notified when specific events happen on your site. For example, you can subscribe to be notified every time a user with a specific role logs in.
+7.3. Report Builder
+   * Custom reports: This is a powerful feature that allows you to build your own custom reports from the data within the LMS. You can select data sources (e.g., Users, Courses), add columns, apply filters and conditions, and set viewing permissions. This allows you to create tailored reports that meet the specific needs of your organization.
+________________
+
+
+8. Glossary
+   * Activity: An interactive tool that a teacher adds to a course for students to engage with (e.g., Quiz, Forum, Assignment).
+   * Activity Completion: A feature for tracking whether a student has completed a specific activity or resource, either manually or based on specific criteria.
+   * Block: An item that can be added to the side or center of a page to provide extra information or functionality (e.g., Calendar, Latest news).
+   * Capability: A specific permission tied to a single function (e.g., the capability to create a course).
+   * Cohort: A site-wide group of users that can be enrolled in courses en masse.
+   * Competency: A described skill, knowledge, or behavior that can be part of a learning framework.
+   * Plugin: A software component that adds a specific feature or functionality to the Tek Play LMS.
+   * Resource: A static item that a teacher adds to a course to support learning (e.g., File, Page, URL).
+   * Role: A collection of capabilities assigned to a user in a specific context (e.g., Teacher, Student).
+   * SCORM: (Sharable Content Object Reference Model) A standard for creating reusable eLearning content that can be tracked by an LMS.
+________________
+
+
+9. Index
+   * Activity Chooser, 12
+   * Add a new course, 11
+   * Add a new user, 8
+   * Analytics, 5
+   * Automated backup, 12
+   * Badges, 6
+   * Bulk user actions, 8
+   * Cohorts, 8
+   * Competencies, 5
+   * Course category, 11
+   * Custom reports, 17
+   * Grades, 14
+   * H5P, 6
+   * Language customisation, 6
+   * Logs, 17
+   * Plugins, 16
+   * Reports, 17
+   * Restore course, 11
+   * Roles, 9
+   * SCORM, 13
+   * Security checks, 17
+   * Upload users, 9
+________________
+
+
+10. Change Log
+Version
+	Date
+	Changes
+	Author
+	1.0
+	June 9, 2025
+	Initial document creation.
+	HERE AND NOW AI
+	________________
+
+
+11. Support & Contact
+For technical support with your Tek Play LMS instance, please contact HERE AND NOW AI.
+   * Email: support@hereandnowai.com
+   * Phone:
+   * +91 996 296 1000
+   * +91 893 956 1000
+   * +91 984 112 0066
+   *    * Support Ticket Portal: https://hereandnowai.com/tickets
+________________
+
+
+[End of Document]
